@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { educations } from '~/assets/data/educationData';
+import { skills } from '~/assets/data/skillData';
 import EducationCard from '~/components/EducationCard.vue';
+import SkillsCard from '~/components/SkillsCard.vue';
 
 </script>
 
@@ -23,6 +25,11 @@ import EducationCard from '~/components/EducationCard.vue';
 
         </div>
         <div class="skills">
+            <h1 class="skills-title">Skills</h1>
+            <div class="skills-cards">
+                <SkillsCard v-for="skill in skills" :key="skill.title" :skill="skill"/>
+
+            </div>
 
         </div>
         <div class="services">
@@ -63,6 +70,17 @@ import EducationCard from '~/components/EducationCard.vue';
     margin-top: 20px;
 }
 
+.skills-title {
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.skills-cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 @media (min-width:480px) {
     .about-me {
         width: 50%;
