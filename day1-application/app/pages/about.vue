@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { educations } from '~/assets/data/educationData';
+import { services } from '~/assets/data/serviceData';
 import { skills } from '~/assets/data/skillData';
 import EducationCard from '~/components/EducationCard.vue';
+import ServiceCard from '~/components/ServiceCard.vue';
 import SkillsCard from '~/components/SkillsCard.vue';
 
 </script>
@@ -33,6 +35,11 @@ import SkillsCard from '~/components/SkillsCard.vue';
 
         </div>
         <div class="services">
+            <h1 class="services-title">Services</h1>
+            <div class="services-cards">
+                <ServiceCard v-for="s in services" :key="s.title" :service="s"/>
+
+            </div>
 
         </div>
 
@@ -76,6 +83,17 @@ import SkillsCard from '~/components/SkillsCard.vue';
 }
 
 .skills-cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.services-title {
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.services-cards{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
