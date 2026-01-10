@@ -27,6 +27,7 @@ import { projects } from '~/assets/data/projectData';
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .projects-title {

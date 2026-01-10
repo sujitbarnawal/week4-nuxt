@@ -98,6 +98,7 @@ import SkillsCard from '~/components/SkillsCard.vue';
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 @media (min-width:480px) {
     .about-me {
