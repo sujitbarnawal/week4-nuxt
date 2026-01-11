@@ -103,5 +103,11 @@ img {
 
 a {
     text-decoration: none;
+    background-color: rgb(236, 196, 204);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

@@ -85,19 +85,11 @@
 
 
 <style scoped>
-#contact {
-    width: 90%;
-    margin: auto;
-    padding: 40px;
-    display: flex;
-    gap: 20px;
-}
 
 .contact-info {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 30%;
     border-radius: 10px;
 
 }
@@ -127,6 +119,11 @@ h3 {
     gap: 20px;
 }
 
+.method{
+    overflow-wrap: anywhere;
+
+}
+
 
 .follow-me {
     padding: 20px;
@@ -146,16 +143,19 @@ a{
 }
 
 .w-5{
-    width: 1.5rem;
+    width: 1rem;
 }
 .h-5{
-    height: 1.5rem;
+    height: 1rem;
 }
 
 .links{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
+
+
 
 
 
