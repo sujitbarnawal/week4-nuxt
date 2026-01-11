@@ -5,26 +5,27 @@ export default defineNuxtConfig({
   app:{
     head:{
       title:"Nuxt Day-2",
-      htmlAttrs:{
-        lang:'en'
-      },
+      // htmlAttrs:{
+      //   lang:'en'
+      // },
       link:[
         {rel:'icon',type:'image/x-icon',href:'/favicon.ico'}
       ],
-      charset:'utf-8',
-      viewport:'width=device-width,initial-scale=1',
-      meta:[
-        {name:'description',content:"Learning Nuxt"}
-      ],
-      bodyAttrs:{
-        class:'test'
-      },
-      script:[{
-        innerHTML:'console.log(\'hello world\')'
-      }]
+      // charset:'utf-8',
+      // viewport:'width=device-width,initial-scale=1',
+      // meta:[
+      //   {name:'description',content:"Learning Nuxt"}
+      // ],
+      // bodyAttrs:{
+      //   class:'test'
+      // },
+      // script:[{
+      //   innerHTML:'console.log(\'hello world\')'
+      // }]
     },
     pageTransition:{
       name:"page",mode:"out-in"
     }
-  }
+  },
+  css:['/assets/css/main.css']
 })
