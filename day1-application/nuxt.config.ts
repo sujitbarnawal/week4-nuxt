@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       meta:[
         {name:"description",content:"Portfolio Website - Sujit Barnawal"}
       ]
+    },
+    pageTransition:{
+      name:'page',mode:'out-in'
     }
   },
   css:['/assets/css/main.css']
