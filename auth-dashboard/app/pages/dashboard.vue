@@ -1,6 +1,11 @@
 <script setup lang="ts">
     import {useAuth} from "../composables/useAuth"
 
+    useSeo(
+        'Dashboard',
+        'User Dashboard Overview'
+    )
+
     definePageMeta({
         middleware:"auth"
     })

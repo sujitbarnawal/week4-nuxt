@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { useAuth } from "../composables/useAuth"
 
+useSeo(
+    'Login',
+    'Login to access your dashboard'
+)
+
 definePageMeta({
     layout:false
 })

@@ -1,5 +1,9 @@
 <script setup lang="ts">
     import {useAuth} from "../composables/useAuth"
+    useSeo(
+        'Profile',
+        'Manage your profile information'
+    )
     definePageMeta({
         middleware:'auth'
     })
