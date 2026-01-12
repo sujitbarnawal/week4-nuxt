@@ -9,7 +9,7 @@
 
 </script>
 <template>
-  <div class="p-6">
+  <div class="pt-5 w-[90%] mx-auto">
     <h1 class="text-2xl font-semibold mb-4">
       Dashboard
     </h1>
