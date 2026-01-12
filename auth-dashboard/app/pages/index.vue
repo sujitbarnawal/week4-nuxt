@@ -7,7 +7,8 @@ useSeo(
 )
 
 definePageMeta({
-    layout:false
+    layout:false,
+    middleware:'auth'
 })
 
 const error = ref("")

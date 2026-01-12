@@ -1,4 +1,13 @@
-export default defineNuxtRouteMiddleware(()=>{
-    const user = useState('user')
-    if(!user.value) {return navigateTo('/')}
+export default defineNuxtRouteMiddleware((to) => {
+    const { user } = useAuth()
+
+    if (user.value && to.path === '/') {
+        return navigateTo('/dashboard')
+    }
+
+    const protectedRoutes = ['/dashboard', '/profile']
+    
+    if (!user.value && protectedRoutes.includes(to.path)) {
+        return navigateTo('/')
+    }
 })

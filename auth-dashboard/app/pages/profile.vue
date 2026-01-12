@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import {useAuth} from "../composables/useAuth"
+    import type { User } from "../composables/useAuth"
     useSeo(
         'Profile',
         'Manage your profile information'
@@ -22,6 +23,11 @@
             await new Promise((res)=>setTimeout(res,1000))
             user.value.name=name.value
             user.value.email=email.value
+            const cookie = useCookie<User|null>("auth_user")
+            cookie.value={
+                name:name.value,
+                email:email.value
+            }
             success.value=true
             setTimeout(()=>(success.value=false),2000)
         } catch (error) {

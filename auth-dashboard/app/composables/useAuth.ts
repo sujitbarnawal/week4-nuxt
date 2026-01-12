@@ -1,20 +1,29 @@
-export type User={
-    name:string,
-    email:string
+export type User = {
+    name: string;
+    email: string;
 }
 
-export const useAuth=()=>{
-    const user = useState<User|null>("user",()=>null)
+export const useAuth = () => {
+    
+    const user = useState<User | null>("user", () => null);
+    const cookie = useCookie<User | null>("auth_user");
 
-    const login =async (payLoad:User)=>{
-        user.value=payLoad
-        await navigateTo('/dashboard')
+   
+    if (cookie.value && !user.value) {
+        user.value = cookie.value;
     }
 
-    const logout = async()=>{
-        user.value=null
-        await navigateTo('/')
+    const login = async (payLoad: User) => {
+        user.value = payLoad;
+        cookie.value = payLoad; 
+        await navigateTo('/dashboard');
     }
 
-    return {user,login,logout}
+    const logout = async () => {
+        user.value = null;
+        cookie.value = null; 
+        await navigateTo('/');
+    }
+
+    return { user, login, logout }
 }
